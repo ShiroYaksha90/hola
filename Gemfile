@@ -36,6 +36,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rspec' 
 end
 
 group :production do
