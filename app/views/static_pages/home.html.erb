@@ -1,3 +1,8 @@
-<%provide(:title,'Home')%>
+<div class="center jumbotron">
     <h1>Welcome to our website!</h1>
+    <%= link_to 'Sign up now!', signup_path, class: "btn btn-lg btn-primary"%>
     <p>Thank you for visiting our website. We hope you find what you're looking for.</p>
+</div>
+
+<%= link_to image_tag("social.webp", alt: "social logo"),
+            "http://rubyonrails.org"%>
