@@ -1,0 +1,15 @@
+<%provide(:title, 'Contact')%>
+<h1>Contact Us</h1>
+
+<%= form_with url: static_pages_contact_path, method: :post do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+
+    <%= form.label :message %>
+    <%= form.text_area :message %>
+
+    <%= form.submit "Send Message" %>
+<% end %>
