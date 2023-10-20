@@ -5,8 +5,7 @@ RSpec.describe 'SiteLayouts', type: :feature do
     it 'renders the correct page' do
       visit '/'
       expect(page).to have_content('Welcome to our website!')
-      expect(page).to have_selector('p',
-                                    text: "Thank you for visiting our website. We hope you find what you're looking for.")
+      expect(page).to have_selector('h1', text: 'Welcome to our website!')
     end
 
     it 'it routes to the correct path' do

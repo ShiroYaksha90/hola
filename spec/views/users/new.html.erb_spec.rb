@@ -5,6 +5,6 @@ RSpec.describe 'user/new.html.erb', type: :feature do
     visit '/signup'
     expect(page).to have_content('Sign up')
     expect(page).to have_title('Sign up | Hola App')
-    expect(page).to have_selector('p', text: 'This will be a signup page for new users.')
+    expect(page).to have_selector('h1', text: 'Sign up')
   end
 end
