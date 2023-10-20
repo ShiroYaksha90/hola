@@ -14,7 +14,7 @@ RSpec.describe 'StaticPages', type: :request do
 
     it 'should have the right title' do
       get static_pages_home_path
-      expect(response.body).to include('<title>Home | Hola App</title>')
+      expect(response.body).to include('<title>Hola App</title>')
     end
   end
 
@@ -49,6 +49,23 @@ RSpec.describe 'StaticPages', type: :request do
     it 'should have the right title' do
       get static_pages_about_path
       expect(response.body).to include('<title>About | Hola App</title>')
+    end
+  end
+
+  describe 'GET /static_pages/contact' do
+    it 'should render a successfull response' do
+      get static_pages_contact_path
+      expect(response).to have_http_status(200)
+    end
+
+    it "should have the content 'Contact'" do
+      get static_pages_contact_path
+      expect(response.body).to include('Contact Us')
+    end
+
+    it 'should have the right title' do
+      get static_pages_contact_path
+      expect(response.body).to include('<title>Contact | Hola App</title>')
     end
   end
 end
