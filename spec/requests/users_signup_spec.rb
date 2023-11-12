@@ -46,6 +46,7 @@ RSpec.describe 'UsersSignups', type: :request do
       follow_redirect!
       expect(response).to render_template(:show)
       expect(flash.empty?).to be_falsey
+      expect(is_logged_in?).to be_truthy
     end
   end
 end
