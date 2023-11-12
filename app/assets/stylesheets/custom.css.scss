@@ -159,6 +159,26 @@ footer {
   }
 }
 
+@media (max-width: 800px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      float: none;
+      padding: 0;
+
+      li {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -199,4 +219,10 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+/* Dropdown menue */
+
+.dropdown-menu.active {
+  display: block;
 }
